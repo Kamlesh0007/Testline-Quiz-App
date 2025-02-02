@@ -15,6 +15,15 @@ app.get("/api/server", async (req, res) => {
     }
 });
 
+app.get("/", async (req, res) => {
+    try {
+       
+        res.json("Hello");  
+    } catch (error) {
+        res.status(500).json({ error: "Failed to deploy" });
+    }
+});
+
 const PORT = 3000;
 
 app.listen(PORT, () => {
