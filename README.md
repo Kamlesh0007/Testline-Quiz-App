@@ -60,15 +60,15 @@ Testline Quiz App/
 ## 📸 Screenshots
 1️⃣ Home Page
 
-![Home Page Screenshot](./src/assets/Homepage.png)
+![Home Page Screenshot](./assets/Homepage.png)
 
 2️⃣ Quiz Page
 
-![Quiz Page Screenshot](./src/assets/Question.png)
+![Quiz Page Screenshot](./assets/Question.png)
 
 
 3️⃣ Results Page
-![Results Page Screenshot](./src/assets/Result.png)
+![Results Page Screenshot](./assets/Result.png)
 
 
 
