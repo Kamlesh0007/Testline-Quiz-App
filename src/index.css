@@ -1,0 +1,11 @@
+@import "tailwindcss";
+
+body {
+    background-image: url('/assets/Quiz_BG.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; 
+   
+ 
+}
