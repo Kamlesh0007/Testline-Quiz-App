@@ -12,12 +12,13 @@ const QuizApp = () => {
     setCurrentQuestionIndex,
     saveAnswer,
     userAnswers,
-    completeQuiz
+    completeQuiz,  quizTimer,
+    setQuizTimer,
   } = useContext(QuizContext);
 
   const [selectedAnswer, setSelectedAnswer] = useState(null);
   const [loading, setLoading] = useState(false);
-  const [quizTimer, setQuizTimer] = useState(900); // 15 minutes total quiz time (in seconds)
+  
   const [timerRunning, setTimerRunning] = useState(true); // Timer will start as soon as the quiz starts
 
   const question = questions[currentQuestionIndex];
@@ -73,6 +74,8 @@ const QuizApp = () => {
     completeQuiz();
     navigate("/result");
   };
+
+ 
 
   const handlePrevQuestion = () => {
     if (currentQuestionIndex > 0) {

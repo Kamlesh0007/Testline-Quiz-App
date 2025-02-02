@@ -5,7 +5,7 @@ import { FaHome } from "react-icons/fa"; // Add this for a home icon
 
 const Result = () => {
   const navigate = useNavigate();
-  const { questions, userAnswers,quizCompleted } = useContext(QuizContext);
+  const { questions, userAnswers,quizCompleted,resetQuiz } = useContext(QuizContext);
 
   console.log(questions);
   
@@ -25,6 +25,10 @@ const Result = () => {
     (ans) => !ans.selectedOption?.is_correct
   ).length;
 
+  const handleGoToHome = () => {
+    resetQuiz(); // Reset timer, questions, and answers
+    navigate("/");
+  };
   // Total score calculation: 4 points for correct, -1 for incorrect
   const totalScore = (correctAnswersCount * 4) - (incorrectAnswersCount * 1);
 
@@ -33,7 +37,7 @@ const Result = () => {
       <div className="bg-white/20 backdrop-blur-xl p-8 rounded-2xl shadow-2xl w-full max-w-4xl text-center border border-white/60 aspect-w-16 aspect-h-9">
         <h2 className="text-3xl font-bold text-green-500"> 🎉 Quiz Completed! 🎉</h2>
         <button
-          onClick={() => navigate("/")}
+    onClick={handleGoToHome}
           className="mt-6 bg-red-400 text-white px-8 py-3 rounded-full text-lg shadow-lg hover:bg-red-700 transition duration-300"
         >
           <FaHome className="inline-block mr-2" /> Go to Home

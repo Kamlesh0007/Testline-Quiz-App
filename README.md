@@ -57,5 +57,20 @@ Testline Quiz App/
 3. Answer multiple-choice questions
 4. View your final score and detailed explanations after completing the quiz.
 
+## 📸 Screenshots
+1️⃣ Home Page
+
+(./src/assets/Homepage.png)
+
+2️⃣ Quiz Page
+
+![Quiz Page Screenshot](./src/assets/Question.png)
+
+
+3️⃣ Results Page
+![Results Page Screenshot](./src/assets/Result.png)
+
+
+
 
 

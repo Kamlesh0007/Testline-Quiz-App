@@ -10,7 +10,15 @@ export const QuizProvider = ({ children }) => {
   const [userAnswers, setUserAnswers] = useState([]); // Track answers per question
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [quizCompleted, setQuizCompleted] = useState(false); // Track quiz completion
+  const [quizTimer, setQuizTimer] = useState(900); // 15 min timer
 
+  // Reset quiz when user clicks "Go to Home"
+  const resetQuiz = () => {
+    setCurrentQuestionIndex(0);
+    setUserAnswers([]);
+    setQuizCompleted(false);
+    setQuizTimer(900); // Reset timer
+  };
   const completeQuiz = () => {
     setQuizCompleted(true); 
   };
@@ -43,7 +51,9 @@ export const QuizProvider = ({ children }) => {
         currentQuestionIndex,
         setCurrentQuestionIndex,
         saveAnswer,
-        quizCompleted, completeQuiz,
+        quizCompleted, completeQuiz,resetQuiz, 
+        quizTimer,
+        setQuizTimer,
       }}
     >
       {children}
