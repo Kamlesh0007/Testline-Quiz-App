@@ -38,3 +38,12 @@ dist-ssr/
 *.sw?
 
 
+
+# Video files
+*.mp4
+*.mov
+*.avi
+*.mkv
+*.wmv
+*.flv
+*.mpeg
